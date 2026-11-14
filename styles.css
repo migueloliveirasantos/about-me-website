@@ -53,12 +53,18 @@ h2 {
     margin-top: 20px;
 }
 
+.about-me p {
+    flex: 1;
+    min-width: 0;
+}
+
 .about-me img {
-    width: 100%;
-    max-width: 500px;
+    width: 40%;
+    max-width: 350px;
+    min-width: 0;
     height: auto;
     border-radius: 10%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* HOBBIES */
@@ -150,25 +156,15 @@ h2 {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
-    main {
-        padding: 25px 20px;
-    }
-
-    .about-me,
-    .future-plans {
+@media (max-width: 800px) {
+    .about-me {
         flex-direction: column;
+        align-items: center;
     }
 
     .about-me img {
-        max-width: 100%;
-    }
-
-    .future-plans img {
-        max-width: 80%;
-    }
-
-    #hobbies ul {
-        flex-wrap: wrap;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
     }
 }
