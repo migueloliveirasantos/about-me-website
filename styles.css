@@ -1,3 +1,5 @@
+
+/* GENERAL PAGE STYLING */
 body {
     font-family: "Times New Roman", serif;
     background-color: #585050;
@@ -5,17 +7,21 @@ body {
     margin: 0;
 }
 
+/* MAIN TITLE */
 #main-title {
     font-size: 36px;
     margin: 0;
-    color: #1a1515;
+    color: #f5eeee;
 }
 
+/* MAIN CONTENT */
 main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 30px 45px;
 }
+
+/* HEADER LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -28,14 +34,15 @@ main {
     object-fit: contain;
 }
 
+/* ABOUT ME */
 .me {
-    color: #1a1515;
+    color: #d8caca;
 }
 
 h2 {
-    color: #1a1515;
+    color: #e5dada;
     font-size: 26px;
-    border-left: 6px solid #1a1515;
+    border-left: 6px solid #e5dada;
     padding-left: 10px;
 }
 
@@ -47,10 +54,14 @@ h2 {
 }
 
 .about-me img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 10%;
     object-fit: cover;
 }
 
+/* HOBBIES */
 #hobbies ul {
     display: flex;
     align-items: center;
@@ -65,8 +76,14 @@ h2 {
     object-fit: contain;
 }
 
+.highlight-hobby {
+    color: #f5eeee;
+    font-weight: bold;
+}
+
+/* QUOTE */
 .quote {
-    color: #1a1515;
+    color: #e5dada;
     font-size: 22px;
     font-style: italic;
     text-align: center;
@@ -75,15 +92,16 @@ h2 {
     padding-bottom: 25px;
 }
 
-.quote:after{
+.quote:after {
     content: "";
     display: block;
     width: 60px;
     height: 1px;
-    background-color: #1a1515;
+    background-color: #e5dada;
     margin: 20px auto 0;
 }
 
+/* FUTURE PLANS */
 .future-plans {
     display: flex;
     align-items: center;
@@ -102,50 +120,55 @@ h2 {
     object-fit: contain;
 }
 
-@media (max-width: 600px) {
-    .about-me {
-        flex-direction: column;
-    }
-
-    .about-me img {
-        max-width: 100%;
-        height: auto;
-    }
+/* FOOTER */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #e5e5f5;
-    border: 2px solid #1a1515;
+    color: #f5eeee;
+    border: 2px solid #e5dada;
     border-radius: 30px;
     padding: 10px 25px;
     transition: 0.3s;
 }
 
 .social-links a:hover {
-    background-color: #1a1515;
-    color: #090f20;
+    background-color: #e5dada;
+    color: #1a1515;
 }
 
 .copyright {
     margin-top: 30px;
     font-size: 14px;
-    color: #e5e5f5;
+    color: #e5dada;
     text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #e5e5f5;
 }
 
-.highlight-hobby {
-    color: #1a1515;
-    font-weight: bold;
-}
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    main {
+        padding: 25px 20px;
+    }
 
-.profile-image {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    .about-me,
+    .future-plans {
+        flex-direction: column;
+    }
+
+    .about-me img {
+        max-width: 100%;
+    }
+
+    .future-plans img {
+        max-width: 80%;
+    }
+
+    #hobbies ul {
+        flex-wrap: wrap;
+    }
 }
