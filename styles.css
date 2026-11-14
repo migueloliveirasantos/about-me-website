@@ -1,8 +1,14 @@
 body {
-    background-color:#3d3232;
-    color:#fff; 
+    font-family: "Times New Roman", serif;
+    background-color: #3d3232;
+    color: #fff;
     margin: 0;
+}
 
+#main-title {
+    font-size: 36px;
+    margin: 0;
+    color: #1a1515;
 }
 
 main {
@@ -27,6 +33,8 @@ main {
 }
 
 h2 {
+    color: #1a1515;
+    font-size: 26px;
     border-left: 6px solid #1a1515;
     padding-left: 10px;
 }
@@ -36,22 +44,25 @@ h2 {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
-    img {
-        border-radius: 10%;
-        object-fit: cover;
-    }
 }
 
-.ul {
+.about-me img {
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+#hobbies ul {
     display: flex;
     align-items: center;
     gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-.ul img{
+#hobbies ul img {
     width: 30px;
     height: 30px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .quote {
@@ -92,12 +103,13 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .future-plans {
+    .about-me {
         flex-direction: column;
     }
 
-    .future-plans img {
-        max-width: 80%;
+    .about-me img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -123,4 +135,17 @@ h2 {
     margin-top: 30px;
     font-size: 14px;
     color: #e5e5f5;
+}
+
+.highlight-hobby {
+    color: #1a1515;
+    font-weight: bold;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
